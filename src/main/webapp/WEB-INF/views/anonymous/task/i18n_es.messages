@@ -1,0 +1,17 @@
+# i18n_es.messages
+
+
+anonymous.task.list.label.title = Título
+anonymous.task.list.label.periodInitial = Periodo Inicial
+anonymous.task.list.label.periodFinal = Periodo Final
+anonymous.task.list.label.description = Descripción
+anonymous.task.list.label.link = Enlace
+
+
+anonymous.task.form.label.title = Título
+anonymous.task.form.label.periodInitial = Periodo Inicial
+anonymous.task.form.label.periodFinal = Periodo Final
+anonymous.task.form.label.description = Descripción
+anonymous.task.form.label.link = Enlace
+
+anonymous.task.form.button.return = Volver

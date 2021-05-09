@@ -1,0 +1,4 @@
+authenticated.manager.form.button.create = Crear
+authenticated.manager.form.button.update = Actualizar
+
+authenticated.manager.form.button.return = Volver

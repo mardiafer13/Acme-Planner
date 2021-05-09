@@ -1,0 +1,37 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.task.form.label.title = Title:
+manager.task.form.label.initial = Begin:
+manager.task.form.label.end = End:
+manager.task.form.label.description = Description:
+manager.task.form.label.link = Link:
+manager.task.form.label.workloadInHours = Workload:
+manager.task.form.label.isPublic = Public task
+manager.task.form.button.create = Create
+manager.task.form.button.update = Update
+manager.task.form.button.delete = Delete
+manager.task.form.button.return = Return
+
+manager.message.form.error.spam = One of the fields contains a spam word
+manager.message.form.error.date = Initial date cannot be after end date
+manager.message.form.error.date2 = Final date cannot be before initial date
+manager.message.form.error.date3 = Date cannot be before today
+manager.message.form.error.workload = Workload cannot be higher than dates difference
+manager.message.form.error.workload2 = Workload minutes must be between 0 and 60
+manager.message.form.error.workload3 = Workload must be higher than 0
+ 
+
+manager.task.list.label.initial = Begin
+manager.task.list.label.end = End
+manager.task.list.label.title = Title
+manager.task.list.label.description = Description
+manager.task.list.label.workloadInHours = Workload
+manager.task.list.label.link = Link

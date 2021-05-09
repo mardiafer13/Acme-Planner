@@ -1,0 +1,36 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.task.form.label.title = Título:
+manager.task.form.label.initial = Inicio:
+manager.task.form.label.end = Fin:
+manager.task.form.label.description = Descripción:
+manager.task.form.label.link = Enlace:
+manager.task.form.label.workloadInHours = Carga de trabajo:
+manager.task.form.label.isPublic = Tarea pública
+manager.task.form.button.create = Crear
+manager.task.form.button.update = Actualizar
+manager.task.form.button.delete = Eliminar
+manager.task.form.button.return = Volver
+
+manager.message.form.error.spam = Uno de los campos contiene una palabra spam
+manager.message.form.error.date = La fecha inicial no puede ser posterior a la final
+manager.message.form.error.date2 = La fecha final no puede ser anterior a la inicial
+manager.message.form.error.date3 = La fecha no puede ser anterior a hoy
+manager.message.form.error.workload = La carga de trabajo no puede ser superior a la diferencia entre fechas
+manager.message.form.error.workload2 = Los minutos de la carga de trabajo deben estar entre 0 y 60
+manager.message.form.error.workload3 = La carga de trabajo debe ser superior a 0
+
+manager.task.list.label.initial = Inicio
+manager.task.list.label.end = Fin
+manager.task.list.label.title = Título
+manager.task.list.label.description = Descripción
+manager.task.list.label.workloadInHours = Carga de trabajo
+manager.task.list.label.link = Enlace

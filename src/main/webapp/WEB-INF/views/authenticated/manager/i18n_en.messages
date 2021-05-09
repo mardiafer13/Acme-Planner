@@ -1,0 +1,4 @@
+authenticated.manager.form.button.create = Create
+authenticated.manager.form.button.update = Update
+
+authenticated.manager.form.button.return = Return
