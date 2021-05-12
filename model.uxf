@@ -387,14 +387,12 @@ UserAccount
       <x>1254</x>
       <y>258</y>
       <w>162</w>
-      <h>72</h>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-SpamWord
+Configuration
 --
-+ spanishTranslation: String {NotBlank}
-+ englishTranslation: String {NotBlank}
-+ spamThreshold: double {Range{0,1}}
++ spamWords: String {NotBlank}
 
 
 
