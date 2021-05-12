@@ -6,11 +6,11 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/spam-word/list" extends="master">
+	<definition name="administrator/configuration/list" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/spam-word/list.jsp" />
 	</definition>
 	
-	<definition name="administrator/spam-word/form" extends="master">
+	<definition name="administrator/configuration/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/spam-word/form.jsp" />
 	</definition>
 	

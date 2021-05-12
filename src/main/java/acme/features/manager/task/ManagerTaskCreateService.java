@@ -20,7 +20,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spamWords.SpamWord;
+import acme.entities.configuration.Configuration;
 import acme.entities.tasks.Task;
 import acme.features.anonymous.shout.AnonymousShoutRepository;
 import acme.framework.components.Errors;
@@ -97,8 +97,8 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert entity != null;
 		assert errors != null;
 
-		final Collection<SpamWord> sp = this.ar.findManySpamWord();
-		final List<SpamWord> lsp = new ArrayList<>();
+		final Collection<Configuration> sp = this.ar.findManySpamWord();
+		final List<Configuration> lsp = new ArrayList<>();
 		lsp.addAll(sp);
 
 
