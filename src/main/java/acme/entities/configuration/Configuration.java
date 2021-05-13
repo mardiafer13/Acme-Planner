@@ -22,26 +22,25 @@ public class Configuration extends DomainEntity {
 	public boolean isSpam(final String text) {
 		final String[] lowerCaseText = text.toLowerCase().split(" ");
 		int spamCount = 0;
-		final String[] sp= this.spamWords.split(",");
-		
+		final String[] sp = this.spamWords.split(",");
 
 		for (final String s : sp) {
 
 			if (text.toLowerCase().trim().replaceAll("\\s+", " ").contains(s)) {
 				spamCount++;
-				System.out.println("=============1==============");
 			}
 
 			for (int i = 0; i < lowerCaseText.length; i++) {
 				if (lowerCaseText[i].contains(s)) {
 					spamCount++;
 				}
-				if (spamCount % 2 == 0) {
-					spamCount = spamCount / 2;
-				} else {
-					spamCount = (spamCount / 2) + 1;
-				}
+
 			}
+		}
+		if (spamCount % 2 == 0) {
+			spamCount = spamCount / 2;
+		} else {
+			spamCount = (spamCount / 2) + 1;
 		}
 		final Double umbral = (double) spamCount / lowerCaseText.length;
 

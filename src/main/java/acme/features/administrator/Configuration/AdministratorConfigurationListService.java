@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.administrator.Configuration;
 
 import java.util.Collection;
 
@@ -12,10 +12,10 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorSpamWordListService implements AbstractListService<Administrator, Configuration>{
+public class AdministratorConfigurationListService implements AbstractListService<Administrator, Configuration>{
 
 	@Autowired
-	AdministratorSpamWordRepository repository;
+	AdministratorConfigurationRepository repository;
 
 
 	@Override

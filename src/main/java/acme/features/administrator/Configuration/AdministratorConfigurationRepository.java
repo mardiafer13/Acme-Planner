@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.administrator.Configuration;
 
 import java.util.Collection;
 
@@ -9,7 +9,7 @@ import acme.entities.configuration.Configuration;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AdministratorSpamWordRepository extends AbstractRepository{
+public interface AdministratorConfigurationRepository extends AbstractRepository{
 
 	@Query("select c from Configuration c where c.id = ?1")
 	Configuration findOneById(int id);

@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.administrator.Configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorSpamWordShowService implements AbstractShowService<Administrator, Configuration>{
+public class AdministratorConfigurationShowService implements AbstractShowService<Administrator, Configuration>{
 
 	@Autowired
-	private AdministratorSpamWordRepository repository;
+	private AdministratorConfigurationRepository repository;
 
 
 	@Override

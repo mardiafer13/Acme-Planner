@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.administrator.Configuration;
 
 import javax.annotation.PostConstruct;
 
@@ -13,17 +13,17 @@ import acme.framework.entities.Administrator;
 
 @Controller
 @RequestMapping("/administrator/configuration/")
-public class AdministratorSpamWordController extends AbstractController<Administrator, Configuration>{
+public class AdministratorConfigurationController extends AbstractController<Administrator, Configuration>{
 
 	
 	@Autowired
-	private AdministratorSpamWordListService	listService;
+	private AdministratorConfigurationListService	listService;
 	
 	@Autowired
-	private AdministratorSpamWordUpdateService updateService;
+	private AdministratorConfigurationUpdateService updateService;
 	
 	@Autowired
-	private AdministratorSpamWordShowService showService;
+	private AdministratorConfigurationShowService showService;
 	
 	@PostConstruct
 	private void initialise() {

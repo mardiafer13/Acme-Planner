@@ -7,11 +7,11 @@
 <tiles-definitions>
 
 	<definition name="administrator/configuration/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/spam-word/list.jsp" />
+		<put-attribute name="body" type="template" value="../administrator/configuration/list.jsp" />
 	</definition>
 	
 	<definition name="administrator/configuration/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/spam-word/form.jsp" />
+		<put-attribute name="body" type="template" value="../administrator/configuration/form.jsp" />
 	</definition>
 	
 	
