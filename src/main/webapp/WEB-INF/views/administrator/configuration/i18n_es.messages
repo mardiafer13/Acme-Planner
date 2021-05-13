@@ -8,14 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+administrator.configuration.form.label.spamWords= Palabras spam
+administrator.configuration.list.label.spamWords = Palabras spam
 
-administrator.spam_word.list.label.spanishTranslation = Traducción al español
-administrator.spam_word.list.label.englishTranslation = Traducción al inglés
-administrator.spam_word.list.label.spamThreshold = Umbral
-
-administrator.spam_word.form.label.spanishTranslation = Traducción al español
-administrator.spam_word.form.label.englishTranslation = Traducción al inglés
-administrator.spam_word.form.label.spamThreshold = Umbral
 
 administrator.spam_word.form.button.update = Actualizar
 administrator.spam_word.form.button.return = Volver

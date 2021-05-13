@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.administrator.Configuration;
 
 import javax.annotation.PostConstruct;
 
@@ -6,24 +6,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.spamWords.SpamWord;
+import acme.entities.configuration.Configuration;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/spam-word/")
-public class AdministratorSpamWordController extends AbstractController<Administrator, SpamWord>{
+@RequestMapping("/administrator/configuration/")
+public class AdministratorConfigurationController extends AbstractController<Administrator, Configuration>{
 
 	
 	@Autowired
-	private AdministratorSpamWordListService	listService;
+	private AdministratorConfigurationListService	listService;
 	
 	@Autowired
-	private AdministratorSpamWordUpdateService updateService;
+	private AdministratorConfigurationUpdateService updateService;
 	
 	@Autowired
-	private AdministratorSpamWordShowService showService;
+	private AdministratorConfigurationShowService showService;
 	
 	@PostConstruct
 	private void initialise() {
