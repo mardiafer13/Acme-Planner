@@ -13,16 +13,15 @@
 package acme.features.anonymous.shout;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.Configuration;
 import acme.entities.shouts.Shout;
-import acme.entities.spamWords.SpamWord;
-import acme.features.administrator.spamWord.AdministratorSpamWordRepository;
+import acme.features.administrator.Configuration.AdministratorConfigurationRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -38,7 +37,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	protected AnonymousShoutRepository			repository;
 
 	@Autowired
-	protected AdministratorSpamWordRepository	repositorySpamwords;
+	protected AdministratorConfigurationRepository	repositorySpamwords;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -95,8 +94,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
         assert errors != null;
         final String[] trozos = entity.getText().split(" ");
 
-        final Collection<SpamWord> sp = this.repository.findManySpamWord();
-        final List<SpamWord> lsp = new ArrayList<>();
+        final List<Configuration> sp = this.repository.findManySpamWord();
+        final List<Configuration> lsp = new ArrayList<>();
         lsp.addAll(sp);
         
         for (int i = 0; i < lsp.size(); i++) {

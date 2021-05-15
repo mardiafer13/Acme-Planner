@@ -1,9 +1,10 @@
-package acme.features.administrator.spamWord;
+
+package acme.features.administrator.Configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spamWords.SpamWord;
+import acme.entities.configuration.Configuration;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -11,21 +12,21 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorSpamWordUpdateService implements AbstractUpdateService<Administrator, SpamWord>{
+public class AdministratorConfigurationUpdateService implements AbstractUpdateService<Administrator, Configuration> {
 
 	@Autowired
-	private AdministratorSpamWordRepository repository;
+	private AdministratorConfigurationRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<SpamWord> request) {
+	public boolean authorise(final Request<Configuration> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
+	public void bind(final Request<Configuration> request, final Configuration entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -34,18 +35,18 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 	}
 
 	@Override
-	public void unbind(final Request<SpamWord> request, final SpamWord entity, final Model model) {
+	public void unbind(final Request<Configuration> request, final Configuration entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spanishTranslation", "englishTranslation", "spamThreshold");
+		request.unbind(entity, model, "spamWords");
 	}
 
 	@Override
-	public SpamWord findOne(final Request<SpamWord> request) {
+	public Configuration findOne(final Request<Configuration> request) {
 		assert request != null;
-		SpamWord result;
+		Configuration result;
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
@@ -53,7 +54,7 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 	}
 
 	@Override
-	public void validate(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
+	public void validate(final Request<Configuration> request, final Configuration entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -61,7 +62,7 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 	}
 
 	@Override
-	public void update(final Request<SpamWord> request, final SpamWord entity) {
+	public void update(final Request<Configuration> request, final Configuration entity) {
 		assert request != null;
 		assert entity != null;
 
