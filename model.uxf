@@ -598,4 +598,137 @@ Manage &gt;
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;170.0;150.0;170.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>498</y>
+      <w>210</w>
+      <h>468</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Test&gt;&gt;
+AbstractTest
+--
++ protocol: String
++ host: String
++ port: String
++ contextPath: String
++ contextHome: String
++ contextQuery: String
++/ baseurl: String
++/ homeUrl: String
+
++ headless: boolean
++ autoPausing: boolean
++ defaultTimeout: int
++ setbaseCamp(protocol:String,host:String,port:String,
+             contextPath:String, contextHome: String,
+             contextQuery:String)
+
++ beforeAll()
++ beforeEach()
++ afterEach()
++ afterAll()
+
++ sleep(duration: int, exact: boolean)
++ shortSleep()
++ longSleep()
+
++ getCurrentUrl(): String
++ getSimplePath(): String
++ checkSimplePath(path: String)
+
++ locateOne(locator: By): WebElement
++ locateMany(locator: By): List&lt;WebElement&gt;
++ exists(locator: By): boolean
++ checkExists(locator: By)
++ checkNotExists(locator: By)
+
++ clear(locator: By)
++ fill(locator: By, value: String)
+
++ navigateHome()
++ navigate(path: String, query: String)
++ navigate(navigator: Runnable)
+
++ clickAndGo(locator: By)
++ clickAndGo(element: WebElement)
++ clickAndWait(locator: By)
++ clickAndWait(element: WebElement)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>498</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Test&gt;&gt;
+AcmeTest
+--
++ checkLinkExists(label: String)
++ checkButtonExists(label: String)
++ checkAlertExists(sucess: boolean)
++ checkPanicExists()
++ checkNotPanicExists()
++ checkErrorsExists()
++ checkNotErrorsExists()
++ checkNotErrorsExists(name: String)
++ checkInputBoxHasValue(name: String, value: String)
++ checkColumHasValue(recordIndex: int, 
+                     columIndex: int, value: String)
+
++ fillnputBoxIn(name: String, value: String)
+
++ clickOnMenu(header: String, option: String)
++ clickOnLink(label: String)
++ clickOnListingRecord(recordIndex: int)
++ clickOnSubmitButton(label: String)
++ clickOnReturnButton(label: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>618</y>
+      <w>144</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1218</x>
+      <y>546</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Test&gt;&gt;
+AcmePlannerTest
+--
++ beforeAll()
++ signIn(username: String, password: String)
++ signOut()
++ signUp(username: String, password: String,
+         name: String, surname: String, email: String,
+         phone: String, accept: String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>594</y>
+      <w>90</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
 </diagram>
