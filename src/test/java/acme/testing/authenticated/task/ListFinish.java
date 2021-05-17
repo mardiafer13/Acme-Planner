@@ -14,9 +14,9 @@ public class ListFinish extends AcmePlannerTest{
 		//Test cases----------------------
 		
 		@ParameterizedTest
-		@CsvFileSource(resources = "/authenticated/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@CsvFileSource(resources = "/authenticated/task/listFinishPublicTasks.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void ListPublicFinished(final int recordIndex,final String title, final String periodInitial, final String periodFinal, final String description, final String link, final String workload) {
+		public void ListPublicFinished(final int recordIndex,final String title, final String description,final String periodInitial, final String periodFinal, final String workload, final String link) {
 			//Con que usuario entramos
 			super.signIn("manager1", "manager1");
 			
@@ -32,9 +32,12 @@ public class ListFinish extends AcmePlannerTest{
 			//super.fillInputBoxIn("isPublic", isPublic);
 			
 			//Comprobar en que posicion del listado se encuentra el atributo
-			super.checkColumnHasValue(recordIndex, 0, periodInitial);
-			super.checkColumnHasValue(recordIndex, 1, periodFinal);
-			super.checkColumnHasValue(recordIndex, 2, title);
+			super.checkColumnHasValue(recordIndex, 0, title);
+			super.checkColumnHasValue(recordIndex, 1, description);
+			super.checkColumnHasValue(recordIndex, 2, periodInitial);
+			super.checkColumnHasValue(recordIndex, 3, periodFinal);
+			super.checkColumnHasValue(recordIndex, 4, workload);
+			super.checkColumnHasValue(recordIndex, 5, link);
 			
 			//Clica
 			super.clickOnListingRecord(recordIndex);
@@ -42,9 +45,9 @@ public class ListFinish extends AcmePlannerTest{
 			//Comprobar el valor del atributo
 			super.checkInputBoxHasValue("title", title);
 			super.checkInputBoxHasValue("description", description);
-			super.checkInputBoxHasValue("begin", periodInitial);
-			super.checkInputBoxHasValue("end", periodFinal);
-			super.checkInputBoxHasValue("workload", workload);
+			super.checkInputBoxHasValue("periodInitial", periodInitial);
+			super.checkInputBoxHasValue("periodFinal", periodFinal);
+			super.checkInputBoxHasValue("workloadInHours", workload);
 			super.checkInputBoxHasValue("link", link);
 			
 			
