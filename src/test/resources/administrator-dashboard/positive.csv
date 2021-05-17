@@ -1,7 +1,0 @@
-title,periodInitial,periodFinal,description,link,isPublic,workloadInHours
-task 1,2021/02/01 12:30,2021/02/13 12:30,This is task number 1.,http://www.sample-app.com,true,1.58
-task 2,2021/02/11 12:30,2021/02/28 12:30,This is task number 2.,http://www.sample-app.com,true,1.38
-task 3,2021/03/01 12:30,2021/04/01 12:30,This is task number 3.,http://www.sample-app.com,true,6.18
-task 4,2021/02/01 12:30,2021/04/06 13:30,This is task number 4.,http://www.sample-app.com,true,1.34
-task 5,2021/02/01 12:30,2021/04/06 13:30,This is task number 5.,http://www.sample-app.com,false,1.47
-Hacer la compra,2021/07/07 00:00,2021/07/08 00:00,Tengo que ir a comprar tomates,http://www.sample-app.com,true,1.27
