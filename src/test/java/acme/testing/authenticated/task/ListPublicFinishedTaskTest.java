@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public abstract class ListPublicFinishedTaskTest extends AcmePlannerTest {
+public class ListPublicFinishedTaskTest extends AcmePlannerTest {
 
 	
 	//Lifecycle management------------------
@@ -14,22 +14,22 @@ public abstract class ListPublicFinishedTaskTest extends AcmePlannerTest {
 	//Test cases----------------------
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/authenticated/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex,final String title, final String periodInitial, final String periodFinal, final String description, final String link, final String workload) {
+	public void ListPublicFinished(final int recordIndex,final String title, final String periodInitial, final String periodFinal, final String description, final String link, final String workload) {
 		//Con que usuario entramos
 		super.signIn("manager1", "manager1");
 		
 		//Donde debe entrar para hacer la comprobacion
 		super.clickOnMenu("Authenticated", "List finished tasks");
 		
-//Esto es si se necesita poner algo en el input
-//		super.fillInputBoxIn("title", title);
-//		super.fillInputBoxIn("periodInitial", periodInitial);
-//		super.fillInputBoxIn("periodFinal", periodFinal);
-//		super.fillInputBoxIn("description", description);
-//		super.fillInputBoxIn("link", link);
-//		super.fillInputBoxIn("isPublic", isPublic);
+		//Esto es si se necesita poner algo en el input
+		//super.fillInputBoxIn("title", title);
+		//super.fillInputBoxIn("periodInitial", periodInitial);
+		//super.fillInputBoxIn("periodFinal", periodFinal);
+		//super.fillInputBoxIn("description", description);
+		//super.fillInputBoxIn("link", link);
+		//super.fillInputBoxIn("isPublic", isPublic);
 		
 		//Comprobar en que posicion del listado se encuentra el atributo
 		super.checkColumnHasValue(recordIndex, 0, periodInitial);
