@@ -20,6 +20,19 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
 		super.clickOnSubmitButton("Shout!");
+		
+		super.clickOnMenu("Anonymous", "List recent shouts");
+		
+		super.checkColumnHasValue(recodIndex, 1, author);
+		super.checkColumnHasValue(recodIndex, 2, text);
+		super.checkColumnHasValue(recodIndex, 3, info);
+		
+		super.clickOnListingRecord(recodIndex);
+		
+		super.checkInputBoxHasValue("author", author);
+		super.checkInputBoxHasValue("text", text);
+		super.checkInputBoxHasValue("info", info);
+		
 	}
 	
 	@ParameterizedTest
@@ -29,6 +42,22 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		
 		super.clickOnMenu("Anonymous", "Create a shout");
 		super.fillInputBoxIn("author", author);
+		super.fillInputBoxIn("text", text);
+		super.fillInputBoxIn("info", info);
+		super.clickOnSubmitButton("Shout!");
+		//super.checkErrorsExist();
+		
+		super.clickOnMenu("Anonymous", "List recent shouts");
+		
+		super.checkColumnHasValue(recodIndex, 1, author);
+		super.checkColumnHasValue(recodIndex, 2, text);
+		super.checkColumnHasValue(recodIndex, 3, info);
+		
+		super.clickOnListingRecord(recodIndex);
+		
+		super.checkInputBoxHasValue("author", author);
+		super.checkInputBoxHasValue("text", text);
+		super.checkInputBoxHasValue("info", info);
 			
 		}
 }
