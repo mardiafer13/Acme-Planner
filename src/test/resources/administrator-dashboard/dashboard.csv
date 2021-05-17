@@ -1,2 +1,2 @@
-publicTasks,privateTasks,finishedTasks,nonFinishedTasks,averageWorkFlow,deviationWorkFlow,maxWorkFlow,minWorkFlow,averageExecutionPeriod,deviationExecutionPeriod,maxExecutionPeriod,minExecutionPeriod
-7,1,1,7,5.69,7.81,26.00,0.00,9.88,39.50,79.00,0.00
+numberPublicTask,numberPrivateTask,numberFinalTask,numberNoFinalTask,averageDurationPeriodTasks,deviationDurationPeriodTasks,minimumDurationPeriodTasks,maximumDurationPeriodTasks,averageWorkloadTasks,deviationWorkloadTasks,minimumWorkloadTasks,maximumWorkloadTasks
+7,1,1,7,5.69,7.81,26.00,0.00,9.88,39.50,79.00,2.00
