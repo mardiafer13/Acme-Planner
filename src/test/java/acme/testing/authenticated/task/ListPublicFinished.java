@@ -21,14 +21,6 @@ public class ListPublicFinished extends AcmePlannerTest{
 			//Donde debe entrar para hacer la comprobacion
 			super.clickOnMenu("Authenticated", "List finished tasks");
 			
-			//Esto es si se necesita poner algo en el input
-			//super.fillInputBoxIn("title", title);
-			//super.fillInputBoxIn("periodInitial", periodInitial);
-			//super.fillInputBoxIn("periodFinal", periodFinal);
-			//super.fillInputBoxIn("description", description);
-			//super.fillInputBoxIn("link", link);
-			//super.fillInputBoxIn("isPublic", isPublic);
-			
 			//Comprobar en que posicion del listado se encuentra el atributo
 			super.checkColumnHasValue(recordIndex, 0, periodInitial);
 			super.checkColumnHasValue(recordIndex, 1, periodFinal);

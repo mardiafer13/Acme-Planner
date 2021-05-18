@@ -1,0 +1,7 @@
+recordIndex,title,description,periodInitial,periodFinal,workloadInHours,link,isPublic
+0,Hacer DP editado,Tengo que terminar la entrega,2021/03/31 17:50,2021/03/31 18:55,0.44,http://www.sample-app.com,false
+1,Hacer DP tarea 7,Prueba de edición,2021/03/31 17:50,2021/08/11 19:55,0.54,http://www.sample-app.com,false
+2,Hacer DP tarea 10,Tengo que terminar la entrega 10,2021/03/31 13:50,2021/08/15 17:55,3.54,,true
+3,Hacer DP tarea 8,Tengo que terminar la entrega 8,2021/03/31 17:50,2021/08/29 19:55,0.24,,true
+4,Hacer DP tarea 5,Tengo que terminar la entrega,2021/03/31 19:50,2021/08/30 17:55,0.05,http://www.twitter.com,false
+5,Probando manager Id editado,Tengo que terminar la entrega editado,2021/03/31 17:50,2021/08/31 18:55,0.14,http://www.sample-app2.com,true
