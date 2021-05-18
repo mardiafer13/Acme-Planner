@@ -4,6 +4,8 @@ package acme.entities.configuration;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.Range;
+
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +19,9 @@ public class Configuration extends DomainEntity {
 	
 	@NotBlank
 	String spamWords;
+	
+	@Range(min = 0, max = 1)
+	private Double spamThreshold;
 
 
 	public boolean isSpam(final String text) {

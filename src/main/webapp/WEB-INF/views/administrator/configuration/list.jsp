@@ -5,5 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="administrator.configuration.list.label.spamWords" path="spamWords" width="20%"/>
+	<acme:list-column code="administrator.configuration.list.label.spamThreshold" path="spamThreshold" width="20%"/>
 </acme:list>
 
