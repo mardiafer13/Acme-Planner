@@ -10,6 +10,9 @@ public class DeleteTaskPositive extends AcmePlannerTest {
 
 	//Test cases----------------------
 
+	// En este test se va comprobar que se pueden eliminar todas las tareas de un manager.
+	// El resultado esperado es que cada una de dichas tareas se elimine correctamente.
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteTasks.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)

@@ -11,6 +11,15 @@ public class UpdateTaskNegative extends AcmePlannerTest {
 
 	//Test cases----------------------
 
+	// En este test se va comprobar la edición de las tareas de un manager.
+	// Al tratarse de un caso de prueba negativo, van a saltar las restricciones de cada uno de los campos
+	// que tiene una tarea. Las restricciones que se van a violar en este test son: dejar el título o
+	// la descripción vacías, poner fechas anteriores a la actual, establecer la fecha de inicio de una
+	// tarea después de la fecha de fin, usar spam words o incluir una url con formato correcto.
+	
+	// Lo esperado es que para cada uno de los campos editados con valores incorrectos, salte un error indicando que
+	// ese campo viola una restricción
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/updateTasksNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
@@ -36,6 +45,7 @@ public class UpdateTaskNegative extends AcmePlannerTest {
 		super.fillInputBoxIn("isPublic", String.valueOf(isPublic));
 		super.clickOnSubmitButton("Update");
 		
+		// Y comprueba que existen errores
 		super.checkErrorsExist();
 				
 		super.signOut();

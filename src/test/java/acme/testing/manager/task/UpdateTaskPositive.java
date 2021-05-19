@@ -11,6 +11,13 @@ public class UpdateTaskPositive extends AcmePlannerTest {
 
 	//Test cases----------------------
 
+	// En este test se va comprobar la edición de las tareas de un manager.
+	// Al tratarse de un caso de prueba positivo, todos los valores incluidos en el archivo csv son valores correctos
+	// que cumplen las restricciones.
+	
+	// El resultado esperado es que cada una de las tareas se hayan editado correctamente con los valores establecidos
+	// en el archivo csv.
+
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/updateTasksPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
