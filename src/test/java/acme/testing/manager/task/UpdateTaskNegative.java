@@ -22,11 +22,6 @@ public class UpdateTaskNegative extends AcmePlannerTest {
 		// Clica en el menú para acceder a las tareas del manager
 		super.clickOnMenu("Manager", "List my tasks");
 
-		// Checkea que se cumple que las columnas coinciden con los valores que indicamos
-		super.checkColumnHasValue(recordIndex, 0, periodInitial);
-		super.checkColumnHasValue(recordIndex, 1, periodFinal);
-		super.checkColumnHasValue(recordIndex, 2, title);
-
 		// Recorre cada uno de los valores
 		super.clickOnListingRecord(recordIndex);
 
