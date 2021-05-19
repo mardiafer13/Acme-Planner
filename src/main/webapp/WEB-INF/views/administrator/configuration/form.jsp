@@ -6,7 +6,7 @@
 <acme:form>
 	
 	<acme:form-url code="administrator.configuration.form.label.spamWords" path="spamWords" />
-	
+	<acme:form-url code="administrator.configuration.form.label.spamThreshold" path="spamThreshold" />
 	<acme:form-submit test="${command == 'show' }"
 	 code="administrator.spam_word.form.button.update"
 	 action="/administrator/configuration/update"/>
