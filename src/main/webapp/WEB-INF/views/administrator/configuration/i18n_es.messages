@@ -11,6 +11,9 @@
 administrator.configuration.form.label.spamWords= Palabras spam
 administrator.configuration.list.label.spamWords = Palabras spam
 
+administrator.configuration.form.label.spamThreshold= Umbral
+administrator.configuration.list.label.spamThreshold= Umbral
+
 
 administrator.spam_word.form.button.update = Actualizar
 administrator.spam_word.form.button.return = Volver

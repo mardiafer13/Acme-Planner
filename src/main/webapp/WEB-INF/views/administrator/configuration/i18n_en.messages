@@ -11,6 +11,9 @@
 administrator.configuration.list.label.spamWords= Spam words
 administrator.configuration.form.label.spamWords= Spam words
 
+administrator.configuration.form.label.spamThreshold= Threshold
+administrator.configuration.list.label.spamThreshold= Threshold
+
 
 administrator.spam_word.form.button.update = Update
 administrator.spam_word.form.button.return = Return
