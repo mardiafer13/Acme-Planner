@@ -11,21 +11,21 @@ public class AuthenticatedTaskCreateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/task/taskPositive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex, final String description,final String Link,final String workload, final String finalPeriod,final String initialPeriod, final String title) {
+	public void createPositive(final int recordIndex,final String title,final String description, final String begin, final String end ,final String workload, final String Link) {
 		super.signIn("manager1", "manager1");
 		super.clickOnMenu("Manager", "Create a task");
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("begin", initialPeriod);
-		super.fillInputBoxIn("end", finalPeriod);
+		super.fillInputBoxIn("begin", begin);
+		super.fillInputBoxIn("end", end);
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("link", Link);
 		super.clickOnSubmitButton("Create");
 
 		super.clickOnMenu("Manager", "List my tasks");
 		
-		super.checkColumnHasValue(recordIndex, 1, initialPeriod);
-		super.checkColumnHasValue(recordIndex, 2, finalPeriod);
+		super.checkColumnHasValue(recordIndex, 1, begin);
+		super.checkColumnHasValue(recordIndex, 2, end);
 		super.checkColumnHasValue(recordIndex, 3, title);
 		
 	}
