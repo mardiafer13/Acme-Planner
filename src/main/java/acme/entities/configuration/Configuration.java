@@ -26,6 +26,7 @@ public class Configuration extends DomainEntity {
 	@Range(min = 0, max = 1)
 	private Double spamThreshold;
 
+	
 
 	public boolean isSpam(final String text) {
 		final String[] lowerCaseText = text.toLowerCase().split(" ");
