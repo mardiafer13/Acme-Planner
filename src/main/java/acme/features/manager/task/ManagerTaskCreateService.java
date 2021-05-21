@@ -127,12 +127,12 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		if (entity.getWorkloadInHours() != null) {
 
-			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-
-				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
-					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-				}
-			}
+//			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
+//
+//				if (entity.getWorkloadInHours() >= (entity.durationPeriodInHours())) {
+//					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
+//				}
+//			}
 
 			if (entity.getWorkloadInHours() < 0) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
@@ -144,8 +144,22 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 
 			final int decNumberInt = Integer.parseInt(str.substring(str.indexOf('.') + 1));
 			
-			if(decNumberInt<0 || decNumberInt>60 ) {
+			if(decNumberInt<0) {
+				System.out.println("Paso por menor que 0");
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
+			}
+			
+			if(decNumberInt>59 ) {
+				System.out.println("Paso por mayor que 60");
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
+			}
+			
+			
+			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
+
+				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
+					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
+				}
 			}
 		}
 
