@@ -14,6 +14,7 @@ package acme.features.manager.task;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,6 +84,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		final List<Configuration> lsp = new ArrayList<>();
 		lsp.addAll(sp);
 
+
 		for (int i = 0; i < lsp.size(); i++) {
 			errors.state(request, !lsp.get(i).isSpam(entity.getTitle()), "title", "manager.message.form.error.spam");
 			errors.state(request, !lsp.get(i).isSpam(entity.getDescription()), "description", "manager.message.form.error.spam");
@@ -92,18 +94,28 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, false, "periodInitial", "manager.message.form.error.date");
 		}
 
+		final Date date = new Date();
+
+		if (entity.getPeriodInitial() != null && entity.getPeriodInitial().before(date)) {
+			errors.state(request, false, "periodInitial", "manager.message.form.error.date3");
+		}
+
+		if (entity.getPeriodFinal() != null && entity.getPeriodFinal().before(date)) {
+			errors.state(request, false, "periodFinal", "manager.message.form.error.date3");
+		}
+
 		if (entity.getPeriodFinal() != null && entity.getPeriodInitial() != null && entity.getPeriodFinal().before(entity.getPeriodInitial())) {
 			errors.state(request, false, "periodFinal", "manager.message.form.error.date2");
 		}
-
+		
 		if (entity.getWorkloadInHours() != null) {
 
-			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-
-				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
-					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-				}
-			}
+//			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
+//
+//				if (entity.getWorkloadInHours() >= (entity.durationPeriodInHours())) {
+//					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
+//				}
+//			}
 
 			if (entity.getWorkloadInHours() < 0) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
@@ -115,8 +127,22 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 
 			final int decNumberInt = Integer.parseInt(str.substring(str.indexOf('.') + 1));
 			
-			if(decNumberInt<0 || decNumberInt>60 ) {
+			if(decNumberInt<0) {
+				System.out.println("Paso por menor que 0");
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
+			}
+			
+			if(decNumberInt>59 ) {
+				System.out.println("Paso por mayor que 60");
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
+			}
+			
+			
+			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
+
+				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
+					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
+				}
 			}
 		}
 
