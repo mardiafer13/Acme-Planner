@@ -25,20 +25,20 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 		super.clickOnMenu("Manager", "List my tasks");
 
 		// Checkea que se cumple que las columnas coinciden con los valores que indicamos
-//		super.checkColumnHasValue(recordIndex, 0, periodInitial);
-//		super.checkColumnHasValue(recordIndex, 1, periodFinal);
-//		super.checkColumnHasValue(recordIndex, 2, title);
+		super.checkColumnHasValue(recordIndex, 0, periodInitial);
+		super.checkColumnHasValue(recordIndex, 1, periodFinal);
+		super.checkColumnHasValue(recordIndex, 2, title);
 
 		// Recorre cada uno de los valores
 		super.clickOnListingRecord(recordIndex);
 
 		//Comprobar el valor del atributo
-//		super.checkInputBoxHasValue("title", title);
-//		super.checkInputBoxHasValue("description", description);
-//		super.checkInputBoxHasValue("periodInitial", periodInitial);
-//		super.checkInputBoxHasValue("periodFinal", periodFinal);
-//		super.checkInputBoxHasValue("workloadInHours", workload);
-//		super.checkInputBoxHasValue("link", link);
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("periodInitial", periodInitial);
+		super.checkInputBoxHasValue("periodFinal", periodFinal);
+		super.checkInputBoxHasValue("workloadInHours", workloadInHours);
+		super.checkInputBoxHasValue("link", link);
 		super.clickOnSubmitButton("Delete");
 		
 		super.signOut();
