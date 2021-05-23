@@ -22,10 +22,10 @@ public class AuthenticatedTaskShowService extends AcmePlannerTest{
 
 		super.clickOnListingRecord(recordIndex);
 		
-		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("periodInitial", periodInitial);
 		super.checkInputBoxHasValue("periodFinal", periodFinal);
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("workloadInHours", workloadInHours);
 		super.checkInputBoxHasValue("link", Link);
 		

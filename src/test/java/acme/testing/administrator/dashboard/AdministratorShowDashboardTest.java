@@ -1,5 +1,5 @@
 
-package administrator;
+package acme.testing.administrator.dashboard;
 
 import org.junit.jupiter.api.Test;
 
