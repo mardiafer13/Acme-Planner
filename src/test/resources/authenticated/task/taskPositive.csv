@@ -1,7 +1,0 @@
-recordIndex,title,description,begin,end,workload,Link
-0,Probando manager Id,Tengo que ir a comprar tomates,2021/03/31 17:50,2021/08/31 18:55,1.00,http://www.sample-app.com/
-1,Hacer DP tarea 8,Tengo que terminar la entrega,2021/03/31 17:50,2021/08/29 19:55,1.00,http://www.sample-app.com/
-2,Hacer DP tarea 7,Tengo que terminar la entrega,2021/03/31 17:50,2021/08/11 19:55,1.00,http://www.sample-app.com/
-3,Hacer la compra,Tengo que terminar la entrega,2021/07/07 00:00,2021/07/08 00:00,1.00,http://www.sample-app.com/
-4,Hacer DP tarea 5,Tengo que terminar la entrega,2021/03/31 19:50,2021/08/30 17:55,1.00,http://www.sample-app.com/
-5,Hacer DP tarea 10,Tengo que terminar la entrega,2021/03/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/
