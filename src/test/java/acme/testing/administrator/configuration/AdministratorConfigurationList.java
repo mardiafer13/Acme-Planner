@@ -14,16 +14,18 @@ public class AdministratorConfigurationList extends AcmePlannerTest {
 	@Order(10)
 	public void ListRecent(final int recordIndex,final String spam, final Double threshold) {
 		
+		// Accedemos como administrador
 		super.signIn("administrator", "administrator");
 		super.clickOnMenu("Administrator", "List spam words");
 		
+		// Comprobación de columna
 		super.checkColumnHasValue(recordIndex, 0, spam);
-//		super.checkColumnHasValue(recordIndex, 0, spam);
-		
+
+		// Accedemos a los detalles de cada registro
 		super.clickOnListingRecord(recordIndex);
 		super.checkInputBoxHasValue("spamWords", spam);
-//		super.checkInputBoxHasValue("spamThreshold", threshold.toString());
-
+		
+		// Cerramos sesión
 		super.signOut();
 	}
 }

@@ -15,14 +15,20 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	@Order(10)
 	public void createPositive(final int recordIndex, final String author, final String text, final String info) {
 		
+		// Accedemos al formulario
 		super.clickOnMenu("Anonymous", "Create a shout");
+		
+		// Introducimos los datos
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		
+		// Le damos al boton
 		super.clickOnSubmitButton("Shout!");
-
+		
 		super.clickOnMenu("Anonymous", "List recent shouts");
 		
+		// Comprobamos cada columna
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);

@@ -18,7 +18,7 @@
 	<!-- Shouts -->
 
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/02/13 19:39" />
+		<property name="moment" value="2021/05/22 19:39" />
 		<property name="author" value="John Doe" />
 		<property name="text" value="I'm happy!" />
 		<property name="info">
@@ -27,127 +27,110 @@
 	</bean>
 
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/05/16 15:55" />
+		<property name="moment" value="2021/05/21 15:55" />
 		<property name="author" value="Jane Doe" />
-		<property name="text" value="I'm the master of my room!" />
-		<property name="info" value="http://www.example.org" />
+		<property name="text" value="I have to clean the car" />
+		<property name="info" value="http://www.lavaderoSevilla.com" />
 	</bean>
 
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/05/17 00:00" />
+		<property name="moment" value="2021/05/20 00:00" />
 		<property name="author" value="Foo Bar" />
 		<property name="text" value="Just turning 50!" />
-		<property name="info" value="http://happybirthday.com" />
+		<property name="info" value="" />
 	</bean>
 
 	<bean id="shout04" class="acme.entities.shouts.Shout">
-		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value="Woa! This app's so cool!" />
-		<property name="moment" value="2021/02/13 12:30" />
-		<property name="info" value="http://www.sample-app.com" />
+		<property name="author" value="Leslie Design" />
+		<property name="text" value="I have to go to the dry cleaner!" />
+		<property name="moment" value="2021/05/19 12:30" />
+		<property name="info" value="http://cleanApp.com" />
 	</bean>
 	<bean id="shout05" class="acme.entities.shouts.Shout">
-		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value="Woa! This app's so cool!" />
-		<property name="moment" value="2021/04/10 12:30" />
-		<property name="info" value="http://www.sample-app.com" />
+		<property name="author" value="Marta Design" />
+		<property name="text" value="I have to study for the exams" />
+		<property name="moment" value="2021/05/17 12:30" />
+		<property name="info" value="https://www.informatica.us.es/" />
 	</bean>
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="author" value="Manuel" />
-		<property name="text" value="Good morning! " />
-		<property name="moment" value="2021/04/14 11:30" />
+		<property name="author" value="Manuel Rodriguez" />
+		<property name="text" value="Good morning! This is a fantastic app" />
+		<property name="moment" value="2021/05/16 11:30" />
 		<property name="info" value="http://www.sample-app.com" />
 	</bean>
 	<bean id="shout07" class="acme.entities.shouts.Shout">
 		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value=" Hello people!" />
-		<property name="moment" value="2021/04/13 12:30" />
-		<property name="info" value="http://www.sample-app.com" />
+		<property name="text" value="There are great movies" />
+		<property name="moment" value="2021/05/15 12:30" />
+		<property name="info" value="https://www.netflix.com/" />
 	</bean>
-	<bean id="shout08" class="acme.entities.shouts.Shout">
-		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value="Woa! this is a fantastic day!" />
-		<property name="moment" value="2021/04/12 15:30" />
-		<property name="info" value="http://www.sample-app.com" />
-	</bean>
-	<bean id="shout09" class="acme.entities.shouts.Shout">
-		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value="Woa! Im very happy" />
-		<property name="moment" value="2021/04/11 17:30" />
-		<property name="info" value="http://www.sample-app.com" />
-	</bean>
-	<bean id="shout10" class="acme.entities.shouts.Shout">
-		<property name="author" value="Leslie Design-Testing" />
-		<property name="text" value="Woa! This app's so cool!" />
-		<property name="moment" value="2021/04/10 18:30" />
-		<property name="info" value="http://www.sample-app.com" />
-	</bean>
+	
 
 	<!-- Tasks -->
 
 	<bean id="task01" class="acme.entities.tasks.Task">
-		<property name="title" value="Task 1" />
+		<property name="title" value="Clean my house" />
 		<property name="periodInitial" value="2021/02/01 12:30" />
-		<property name="periodFinal" value="2021/02/13 12:30" />
-		<property name="description" value="This is task number 1." />
-		<property name="link" value="http://www.sample-app.com" />
+		<property name="periodFinal" value="2021/02/01 13:30" />
+		<property name="description" value="I have to clean my house" />
+		<property name="link" value="" />
 		<property name="isPublic" value="true" />
-		<property name="workloadInHours" value="1.58" />
+		<property name="workloadInHours" value="1.00" />
 	</bean>
 	<bean id="task02" class="acme.entities.tasks.Task">
-		<property name="title" value="Task 2" />
+		<property name="title" value="Study the math exam" />
 		<property name="periodInitial" value="2021/02/11 12:30" />
 		<property name="periodFinal" value="2021/02/28 12:30" />
-		<property name="description" value="This is task number 2." />
+		<property name="description" value="I have to study the math exam" />
 		<property name="link"><null /></property>
 		<property name="isPublic" value="true" />
-		<property name="workloadInHours" value="1.38" />
+		<property name="workloadInHours" value="11.25" />
 	</bean>
 	<bean id="task03" class="acme.entities.tasks.Task">
-		<property name="title" value="Task 3" />
+		<property name="title" value="Clean my car" />
 		<property name="periodInitial" value="2021/03/01 12:30" />
-		<property name="periodFinal" value="2021/04/01 12:30" />
-		<property name="description" value="This is task number 3." />
-		<property name="link" value="http://www.sample-app.com" />
+		<property name="periodFinal" value="2021/03/01 12:45" />
+		<property name="description" value="I have to clean my car" />
+		<property name="link" value="http://lavaderos.com" />
 		<property name="isPublic" value="true" />
-		<property name="workloadInHours" value="6.18" />
+		<property name="workloadInHours" value="0.10" />
 	</bean>
 	<bean id="task04" class="acme.entities.tasks.Task">
-		<property name="title" value="Task 4" />
+		<property name="title" value="Go to the doctor" />
 		<property name="periodInitial" value="2021/03/01 12:30" />
 		<property name="periodFinal" value="2021/04/06 13:30" />
-		<property name="description" value="This is task number 4." />
+		<property name="description" value="I have to go to the doctor" />
 		<property name="link"><null /></property>
 		<property name="isPublic" value="true" />
 		<property name="workloadInHours" value="1.34" />
 	</bean>
 	<bean id="task05" class="acme.entities.tasks.Task">
-		<property name="title" value="Task 5" />
+		<property name="title" value="Developing my application" />
 		<property name="periodInitial" value="2021/03/01 12:30" />
 		<property name="periodFinal" value="2021/04/06 13:30" />
-		<property name="description" value="This is task number 5." />
+		<property name="description" value="I have to finish developing my application" />
 		<property name="link" value="http://www.sample-app.com" />
 		<property name="isPublic" value="false" />
-		<property name="workloadInHours" value="1.47" />
+		<property name="workloadInHours" value="8.59" />
 	</bean>
 
 	<bean id="task06" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer la compra" />
+		<property name="title" value="Buy vegetables" />
 		<property name="periodInitial" value="2021/07/07 00:00" />
 		<property name="periodFinal" value="2021/07/08 00:00" />
 		<property name="description"
-			value="Tengo que ir a comprar tomates" />
-		<property name="link" value="http://www.sample-app.com" />
+			value="I have to go to the supermarket" />
+		<property name="link" value="http://supermarketOnline.com" />
 		<property name="isPublic" value="true" />
-		<property name="workloadInHours" value="1.27" />
+		<property name="workloadInHours" value="1.15" />
 	</bean>
 
 	<bean id="task07" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer DP" />
+		<property name="title" value="Do exercises" />
 		<property name="periodInitial" value="2021/03/31 17:50" />
 		<property name="periodFinal" value="2021/03/31 18:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
+			value="I have to finish the dp delivery" />
 		<property name="link" value="http://www.sample-app.com" />
 		<property name="isPublic" value="true" />
 		<property name="manager" ref="managerManager" />
@@ -155,33 +138,33 @@
 	</bean>
 
 	<bean id="task08" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer DP tarea 7" />
+		<property name="title" value="Clean my car" />
 		<property name="periodInitial" value="2021/03/31 17:50" />
 		<property name="periodFinal" value="2021/08/11 19:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
-		<property name="link" value="http://www.sample-app.com" />
+			value="I have to clean my car" />
+		<property name="link" value="" />
 		<property name="isPublic" value="true" />
 		<property name="manager" ref="managerManager" />
-		<property name="workloadInHours" value="0.54" />
+		<property name="workloadInHours" value="8.59" />
 	</bean>
 	<bean id="task09" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer DP tarea 10" />
-		<property name="periodInitial" value="2021/03/31 13:50" />
-		<property name="periodFinal" value="2021/08/15 17:55" />
+		<property name="title" value="Study the math test" />
+		<property name="periodInitial" value="2021/07/28 13:50" />
+		<property name="periodFinal" value="2021/08/28 17:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
-		<property name="link" value="http://www.sample-app.com" />
+			value="I have to study this month" />
+		<property name="link" value="http://mathExams.com" />
 		<property name="isPublic" value="true" />
 		<property name="manager" ref="managerManager" />
-		<property name="workloadInHours" value="3.54" />
+		<property name="workloadInHours" value="9.00" />
 	</bean>
 	<bean id="task10" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer DP tarea 8" />
+		<property name="title" value="Developing my application" />
 		<property name="periodInitial" value="2021/03/31 17:50" />
 		<property name="periodFinal" value="2021/08/29 19:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
+			value="I have to finish developing my application" />
 		<property name="link" value="http://www.sample-app.com" />
 		<property name="manager" ref="managerManager" />
 		<property name="isPublic" value="true" />
@@ -189,23 +172,23 @@
 		<property name="workloadInHours" value="0.24" />
 	</bean>
 	<bean id="task11" class="acme.entities.tasks.Task">
-		<property name="title" value="Hacer DP tarea 5" />
+		<property name="title" value="Study the math exam" />
 		<property name="periodInitial" value="2021/03/31 19:50" />
 		<property name="periodFinal" value="2021/08/30 17:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
-		<property name="link" value="http://www.sample-app.com" />
+			value="I have to study the math exam" />
+		<property name="link" value="" />
 		<property name="isPublic" value="true" />
 		<property name="manager" ref="managerManager" />
 		<property name="workloadInHours" value="1.34" />
 	</bean>
 	<bean id="task12" class="acme.entities.tasks.Task">
-		<property name="title" value="Probando manager Id" />
+		<property name="title" value="Clean the car" />
 		<property name="periodInitial" value="2021/03/31 17:50" />
 		<property name="periodFinal" value="2021/08/31 18:55" />
 		<property name="description"
-			value="Tengo que terminar la entrega" />
-		<property name="link" value="http://www.sample-app.com" />
+			value="I have to clean the car" />
+		<property name="link" value="http://lavaderosSevilla.com" />
 		<property name="isPublic" value="true" />
 		<property name="workloadInHours" value="0.14" />
 		<property name="manager" ref="managerManager" />

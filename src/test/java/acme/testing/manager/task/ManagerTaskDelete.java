@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class DeleteTaskPositive extends AcmePlannerTest {
+public class ManagerTaskDelete extends AcmePlannerTest {
 
 	//Test cases----------------------
 
@@ -14,9 +14,9 @@ public class DeleteTaskPositive extends AcmePlannerTest {
 	// El resultado esperado es que cada una de dichas tareas se elimine correctamente.
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/deleteTasks.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/manager/task/delete.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void deleteTasksPositive(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workload, final String link, final Boolean isPublic) {
+	public void deleteTasksPositive(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager
 		super.signIn("manager1", "manager1");
@@ -37,9 +37,8 @@ public class DeleteTaskPositive extends AcmePlannerTest {
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("periodInitial", periodInitial);
 		super.checkInputBoxHasValue("periodFinal", periodFinal);
-		super.checkInputBoxHasValue("workloadInHours", workload);
+		super.checkInputBoxHasValue("workloadInHours", workloadInHours);
 		super.checkInputBoxHasValue("link", link);
-		super.checkInputBoxHasValue("isPublic", String.valueOf(isPublic));
 		super.clickOnSubmitButton("Delete");
 		
 		super.signOut();
