@@ -234,25 +234,6 @@ UserAccount
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1164</x>
-      <y>258</y>
-      <w>162</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Configuration
---
-+ spamWords: String {NotBlank}
-+treshold: Double {NotNull}
-
-
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>834</x>
       <y>258</y>
       <w>132</w>
@@ -465,5 +446,24 @@ bg=blue</panel_attributes>
     <panel_attributes>lt=..
 </panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1164</x>
+      <y>258</y>
+      <w>168</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Configuration
+--
++ spamWords: String {NotBlank}
++treshold: Double {NotNull, min=0, max=1}
+
+
+
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
