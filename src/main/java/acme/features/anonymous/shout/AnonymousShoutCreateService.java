@@ -92,7 +92,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
         assert request != null;
         assert entity != null;
         assert errors != null;
-        final String[] trozos = entity.getText().split(" ");
 
         final List<Configuration> sp = this.repository.findManySpamWord();
         final List<Configuration> lsp = new ArrayList<>();

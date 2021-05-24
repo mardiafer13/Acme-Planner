@@ -102,7 +102,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		numberPublicTask = this.repository.numberPublicTask();
 		numberPrivateTask = this.repository.numberPrivateTask();
 		averageDurationPeriodTasks=0.0;
-		deviationDurationPeriodTasks= 0.0;
 		maximumDurationPeriodTasks=0.0;
 		averageWorkloadTasks=this.repository.averageWorkloadTasks();
 		deviationWorkloadTasks=this.repository.deviationWorkloadTasks();
@@ -181,7 +180,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	}
 	private static double ponerMinutosSobre60(final Double numero) {
 		double res;
-		final BigDecimal num= new BigDecimal(numero);
+		final BigDecimal num= BigDecimal.valueOf(numero);
 		final long BDhoras=num.longValue();
 		final BigDecimal BDminutos= num.remainder(BigDecimal.ONE);
 		

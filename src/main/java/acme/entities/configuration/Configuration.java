@@ -3,10 +3,9 @@ package acme.entities.configuration;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
-
-import com.sun.istack.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
