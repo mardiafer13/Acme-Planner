@@ -30,17 +30,19 @@ public class Configuration extends DomainEntity {
 	public boolean isSpam(final String text) {
 		final String[] lowerCaseText = text.toLowerCase().split(" ");
 		int spamCount = 0;
+		final String[] sp = this.spamWords.split(",");
 		
-			if (text.toLowerCase().trim().replaceAll("\\s+", " ").contains(this.spamWords)) {
+		for (final String s : sp) {
+			if (text.toLowerCase().trim().replaceAll("\\s+", " ").contains(s)) {
 				spamCount++;
 			}
 			for (int i = 0; i < lowerCaseText.length; i++) {
-				if (lowerCaseText[i].contains(this.spamWords)) {
+				if (lowerCaseText[i].contains(s)) {
 					spamCount++;
 				}
 
 			}
-		
+		}
 		if (spamCount % 2 == 0) {
 			spamCount = spamCount / 2;
 		} else {
