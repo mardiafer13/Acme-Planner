@@ -12,12 +12,12 @@
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 Dashboard
 --
-+ averageNumberOfJobsPerEmployer: double
-+ averageNumberOfApplicationsPerWorker: double
-+ avegageNumberOfApplicationsPerEmployer: double
-+ ratioOfPendingApplications: double
-+ ratioOfAcceptedApplications: double
-+ ratioOfRejectedApplications: double
++ averageNumberOfJobsPerEmployer: Double
++ averageNumberOfApplicationsPerWorker: Double
++ avegageNumberOfApplicationsPerEmployer: Double
++ ratioOfPendingApplications: Double
++ ratioOfAcceptedApplications: Double
++ ratioOfRejectedApplications: Double
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -236,14 +236,14 @@ UserAccount
     <coordinates>
       <x>1164</x>
       <y>258</y>
-      <w>162</w>
+      <w>174</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Configuration
 --
 + spamWords: String {NotBlank}
-+treshold: Double {NotNull}
++treshold: Double {NotNull,Min={0},Max={1}}
 
 
 
@@ -278,7 +278,7 @@ Banner
 Announcement
 --
 + title: String {NotBlank}
-+ moment: Date {Timestamp, Past, NotNull}
++ moment: Date {temporal{TIMESTAMP}, Past, NotNull}
 + status: AnnouncementStatus {NotNull}
 + text: String {NotBlank}
 + info: String {URL}
@@ -435,8 +435,8 @@ Manage &gt;
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>612</x>
-      <y>468</y>
+      <x>624</x>
+      <y>474</y>
       <w>144</w>
       <h>108</h>
     </coordinates>
@@ -447,9 +447,8 @@ periodInitial and periodFinal must
 be future dates when creating
 the tasks
 
-periodInitial and periodFinal must
-be future dates when creating
-the tasks
+the workload must be less than or 
+equal to the difference between dates
 
 bg=blue</panel_attributes>
     <additional_attributes/>
