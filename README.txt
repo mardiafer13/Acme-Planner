@@ -11,7 +11,7 @@
 This is the Acme-Jobs project, which is intended to be a core learning asset for the students
 who have enroled the Design and Testing subject of the Software Engineering curriculum of the 
 University of Sevilla.  This project is intended to illustrate how to develop a simple web
-information system. Our github repository is https://github.com/xXFreeNoobXx/Acme-Planner.git 
+information system. Our github repository is https://github.com/mardiafer13/Acme-Planner.git
 
 - CleverCloud credentials:
     Username: luismi_madrilista@hotmail.com
@@ -29,11 +29,3 @@ MYSQL_ADDON_URI="mysql://uxgcaxzysyalal21:djJFf54THACdy3IvcIJ9@bstjvcygkdoufwwvz
 MYSQL_ADDON_USER="uxgcaxzysyalal21"
 MYSQL_ADDON_VERSION="8.0"
 
-
-- TAREAS A REALIZAR EN LA PROXIMA ENTREGA
-    - Plan de trabajo
-        No se ha seguido la metodología recomendada por los profesores, en consecuencia de ello, no es posible 
-        modificar el plan de trabajo hasta la próxima entrega.
-
-    - Modelo de datos
-        Remodelar la entidad SpamWord, los atributos actuales no son los adecuados para el modelo ideal.
