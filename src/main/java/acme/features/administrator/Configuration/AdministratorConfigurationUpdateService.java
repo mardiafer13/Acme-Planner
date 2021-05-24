@@ -40,7 +40,7 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spamWords");
+		request.unbind(entity, model, "spamWords","spamThreshold");
 	}
 
 	@Override

@@ -1,0 +1,6 @@
+recordIndex,title,description,periodInitial,periodFinal,workloadInHours,link
+0,Clean my car,I have to clean my car,2021/03/01 12:30,2021/03/01 12:45,0.10,http://lavaderos.com
+1,Clean my house,I have to clean my house,2021/02/01 12:30,2021/02/01 13:30,1.00,
+2,Do exercises,I have to finish the dp delivery,2021/03/31 17:50,2021/03/31 18:55,0.44,http://www.sample-app.com
+3,Study the math exam,I have to study the math exam,2021/02/11 12:30,2021/02/28 12:30,11.25,
+4,Go to the doctor,I have to go to the doctor,2021/03/01 12:30,2021/04/06 13:30,1.34,

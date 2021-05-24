@@ -74,7 +74,6 @@ public class Task extends DomainEntity{
 	
 	public Long durationPeriodInHours() {
 		Long duracion;
-		duracion=0L;
 		
 		final long diferenceInMiliseconds = Math.abs(this.periodFinal.getTime() - this.periodInitial.getTime());
 		duracion = TimeUnit.HOURS.convert(diferenceInMiliseconds, TimeUnit.MILLISECONDS);
@@ -82,9 +81,7 @@ public class Task extends DomainEntity{
 	}
 
 	public Long durationPeriodInMinutes() {
-
 		Long duracion;
-		duracion=0L;
 		
 		final long diferenceInMiliseconds = Math.abs(this.periodFinal.getTime() - this.periodInitial.getTime());
 		duracion = TimeUnit.MINUTES.convert(diferenceInMiliseconds, TimeUnit.MILLISECONDS);

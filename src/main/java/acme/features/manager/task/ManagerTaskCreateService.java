@@ -126,40 +126,19 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		}
 		
 		if (entity.getWorkloadInHours() != null) {
-
-//			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-//
-//				if (entity.getWorkloadInHours() >= (entity.durationPeriodInHours())) {
-//					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-//				}
-//			}
-
-			if (entity.getWorkloadInHours() < 0) {
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
-			}
-			
 			final double number = entity.getWorkloadInHours();
-
-			final String str = String.valueOf(number);
-
-			final int decNumberInt = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+			final String str = String.format("%.2f", number);
+			final int parteEntera = Integer.parseInt(str.substring(0, str.indexOf(".")));
+			final int parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+			final int workloadInMinutes = (parteEntera*60) + parteDecimal;
 			
-			if(decNumberInt<0) {
+			if(parteDecimal<0 || parteDecimal>=60) {
 				System.out.println("Paso por menor que 0");
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			}
-			
-			if(decNumberInt>59 ) {
-				System.out.println("Paso por mayor que 60");
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			}
-			
-			
-			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-
-				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
-					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-				}
+			} else if(entity.getWorkloadInHours() < 0) {
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
+			} else if (entity.getPeriodInitial() == null && entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
 			}
 		}
 
