@@ -520,53 +520,8 @@
 	<!-- Configuration -->
 	<bean name="configuration1"
 		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="sex" />
+		<property name="spamWords" value="sex,duro,hard core,viagra,cialis,nigeria,has ganado,you've won,millon de dolares,million dollars" />
 		<property name="spamThreshold" value="0.1"/>
 	</bean>
 
-	<bean name="configuration2"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="duro" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration3"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="hard core" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration4"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="viagra" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration5"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="cialis" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration6"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="nigeria" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration7"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="has ganado" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration8"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="you've won" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration9"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="millon de dolares" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
-	<bean name="configuration10"
-		class="acme.entities.configuration.Configuration">
-		<property name="spamWords" value="million dollars" />
-		<property name="spamThreshold" value="0.1"/>
-	</bean>
 </beans>
