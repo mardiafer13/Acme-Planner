@@ -128,15 +128,17 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		if (entity.getWorkloadInHours() != null) {
 			final double number = entity.getWorkloadInHours();
 			final String str = String.format("%.2f", number);
+			final String fullNumber = String.valueOf(number);
 			final int parteEntera = Integer.parseInt(str.substring(0, str.indexOf(".")));
 			final int parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
 			final int workloadInMinutes = (parteEntera*60) + parteDecimal;
+			final String parteDecimalCompleta = fullNumber.substring(fullNumber.indexOf('.') + 1);
+			final int tamaño = parteDecimalCompleta.length();
 			
-			if(parteDecimal<0 || parteDecimal>=60) {
-				System.out.println("Paso por menor que 0");
+			if(tamaño>2) {
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload4");
+			} else if(parteDecimal<0 || parteDecimal>=60) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			} else if(entity.getWorkloadInHours() < 0) {
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
 			} else if (entity.getPeriodInitial() == null && entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
 			}

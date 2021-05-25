@@ -14,7 +14,6 @@ package acme.features.manager.task;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,55 +93,26 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, false, "periodInitial", "manager.message.form.error.date");
 		}
 
-		final Date date = new Date();
-
-		if (entity.getPeriodInitial() != null && entity.getPeriodInitial().before(date)) {
-			errors.state(request, false, "periodInitial", "manager.message.form.error.date3");
-		}
-
-		if (entity.getPeriodFinal() != null && entity.getPeriodFinal().before(date)) {
-			errors.state(request, false, "periodFinal", "manager.message.form.error.date3");
-		}
-
 		if (entity.getPeriodFinal() != null && entity.getPeriodInitial() != null && entity.getPeriodFinal().before(entity.getPeriodInitial())) {
 			errors.state(request, false, "periodFinal", "manager.message.form.error.date2");
 		}
 		
 		if (entity.getWorkloadInHours() != null) {
-
-//			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-//
-//				if (entity.getWorkloadInHours() >= (entity.durationPeriodInHours())) {
-//					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-//				}
-//			}
-
-			if (entity.getWorkloadInHours() < 0) {
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload3");
-			}
-			
 			final double number = entity.getWorkloadInHours();
-
-			final String str = String.valueOf(number);
-
-			final int decNumberInt = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+			final String str = String.format("%.2f", number);
+			final String fullNumber = String.valueOf(number);
+			final int parteEntera = Integer.parseInt(str.substring(0, str.indexOf(".")));
+			final int parteDecimal = Integer.parseInt(str.substring(str.indexOf('.') + 1));
+			final int workloadInMinutes = (parteEntera*60) + parteDecimal;
+			final String parteDecimalCompleta = fullNumber.substring(fullNumber.indexOf('.') + 1);
+			final int tamaño = parteDecimalCompleta.length();
 			
-			if(decNumberInt<0) {
-				System.out.println("Paso por menor que 0");
+			if(tamaño>2) {
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload4");
+			} else if(parteDecimal<0 || parteDecimal>=60) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			}
-			
-			if(decNumberInt>59 ) {
-				System.out.println("Paso por mayor que 60");
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			}
-			
-			
-			if (entity.getPeriodInitial() != null && entity.getPeriodFinal() != null) {
-
-				if (entity.getWorkloadInHours() > (entity.durationPeriodInHours())) {
-					errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
-				}
+			} else if (entity.getPeriodInitial() == null && entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
 			}
 		}
 
