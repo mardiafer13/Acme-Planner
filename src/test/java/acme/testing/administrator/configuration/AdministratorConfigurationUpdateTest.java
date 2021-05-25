@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AdministratorConfigurationUpdate extends AcmePlannerTest{
+public class AdministratorConfigurationUpdateTest extends AcmePlannerTest{
 
 	
 	@ParameterizedTest

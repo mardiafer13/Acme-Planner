@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskList extends AcmePlannerTest {
+public class ManagerTaskListTest extends AcmePlannerTest {
 
 	
 	@ParameterizedTest

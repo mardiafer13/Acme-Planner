@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerTaskDelete extends AcmePlannerTest {
+public class ManagerTaskDeleteTest extends AcmePlannerTest {
 
 	//Test cases----------------------
 
@@ -15,7 +15,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/delete.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksPositive(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager
@@ -49,7 +49,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	//Test delete negativo de anonymous
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksNegativeAnonymous(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Clica en el menú para acceder a las tareas del manager
@@ -62,7 +62,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	//Test delete negativo de administrador
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksNegativeAdministrator(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager
@@ -80,7 +80,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	//Test delete negativo de employer
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksNegativeEmployer(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager
@@ -98,7 +98,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	//Test delete negativo de worker
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksNegativeWorker(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager
@@ -115,7 +115,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	//Test delete negativo de otro manager
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/deleteNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(10)
 	public void deleteTasksNegativeManager(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Se logea con el usuario manager

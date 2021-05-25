@@ -12,12 +12,12 @@
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 Dashboard
 --
-+ averageNumberOfJobsPerEmployer: double
-+ averageNumberOfApplicationsPerWorker: double
-+ avegageNumberOfApplicationsPerEmployer: double
-+ ratioOfPendingApplications: double
-+ ratioOfAcceptedApplications: double
-+ ratioOfRejectedApplications: double
++ averageNumberOfJobsPerEmployer: Double
++ averageNumberOfApplicationsPerWorker: Double
++ avegageNumberOfApplicationsPerEmployer: Double
++ ratioOfPendingApplications: Double
++ ratioOfAcceptedApplications: Double
++ ratioOfRejectedApplications: Double
 </panel_attributes>
     <additional_attributes/>
   </element>
