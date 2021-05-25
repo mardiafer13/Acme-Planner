@@ -35,8 +35,13 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		
-		return true;
+		final Task tarea = this.findOne(request);
+		final Integer id = tarea.getManager().getId();
+		if(request.getPrincipal().getActiveRoleId() != id) {
+			return false;
+		}else {
+			return true;
+		}
 	}
 
 	@Override
