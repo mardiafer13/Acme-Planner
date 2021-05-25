@@ -5,3 +5,17 @@ recordIndex,title,description,begin,end,workload,Link,isPublic
 3,Developing my application,I have to finish developing my application,2021/07/30 17:50,2021/07/31 19:55,0.01,http://www.sample-app.com,true
 4,Study the math exam,I have to study the math exam,2021/06/24 19:50,2021/08/30 17:55,1.34,,false
 5,Clean the car,I have to clean the car,2021/06/30 17:30,2021/06/30 18:30,0.59,http://lavaderosSevilla.com,false
+6,Probando manager Id,Tengo que ir a comprar tomates,2021/09/31 17:50,2022/08/31 18:55,1.00,http://www.sample-app.com/,false
+7,Hacer DP tarea 8,Tengo que terminar la entrega,2021/07/31 17:50,2021/08/29 19:55,1.00,,false
+8,Hacer DP tarea 7,Tengo que terminar la entrega,2021/06/31 17:50,2021/08/11 19:55,1.00,http://www.sample-app.com/,false
+9,Hacer la compra,Tengo que terminar la entrega,2021/07/07 00:00,2021/07/08 00:00,1.00,,false
+10,Hacer DP tarea 5,Tengo que terminar la entrega,2021/06/31 19:50,2021/08/30 17:55,1.00,http://www.sample-app.com/,false
+11,Hacer DP tarea 10,Tengo que terminar la entrega,2021/07/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/,false
+12,g,Tengo que terminar la entrega,2021/07/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/,false
+13,Esto son 80 caracteres: ggggggggggggggggggggggggggggggggggggggggggggggggggggggg,Tengo que terminar la entrega,2021/07/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/,false
+14,Hacer DP tarea 10,F,2021/07/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/,false
+15,Hacer DP tarea 10,"En efecto rematado ya su juicio""vino a dar en el más extraño pensamiento que jamás dio loco en el mundo y fue que le pareció convenible y necesario así para el aumento de su honra como para el servicio de su república hacerse caballero andante ″Yo sé quién soy–respondió don Quijote– y sé que puedo ser no sólo los que he dicho sino todos los doce Pares de Francia y aun todos los nueve de la Fama pues a todas las hazañas que ellos todos juntos y cada uno por sí hicieron se aventajarán las mías"""".""",2021/07/31 13:50,2021/08/15 17:55,1.00,http://www.sample-app.com/,false
+16,Probando manager Id,Tengo que ir a comprar tomates,2021/09/31 17:50,2021/09/31 18:50,1.00,http://www.sample-app.com/,false
+17,Probando manager Id,Tengo que ir a comprar tomates,2121/09/31 17:50,2022/08/31 18:55,999.00,http://www.sample-app.com/,false
+18,Probando manager Id,Tengo que ir a comprar tomates,2021/09/31 17:50,2021/09/31 17:51,0.01,http://www.sample-app.com/,false
+19,Probando manager Id,Tengo que ir a comprar tomates,2021/09/31 17:50,2022/08/31 18:55,1.00,http://www.sample-app.com/,false
