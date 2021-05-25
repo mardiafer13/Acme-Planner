@@ -14,18 +14,17 @@ University of Sevilla.  This project is intended to illustrate how to develop a 
 information system. Our github repository is https://github.com/mardiafer13/Acme-Planner.git
 
 - CleverCloud credentials:
-    Username: luismi_madrilista@hotmail.com
+    Username: mardiafer13@alum.us.es
     Password: Str0ng-P@$$w0rd
 
-- Application url: http://app-d82bfd37-5dec-4858-9608-2ee40dc8d170.cleverapps.io/Acme-Planner/master/welcome
+- Application url: http://app-ad4886f8-1ef4-442f-a986-05158c94f246.cleverapps.io/Acme-Planner/master/welcome
 
 - Environment variables:
 
-MYSQL_ADDON_DB="bstjvcygkdoufwwvzdbt"
-MYSQL_ADDON_HOST="bstjvcygkdoufwwvzdbt-mysql.services.clever-cloud.com"
-MYSQL_ADDON_PASSWORD="djJFf54THACdy3IvcIJ9"
-MYSQL_ADDON_PORT="3306"
-MYSQL_ADDON_URI="mysql://uxgcaxzysyalal21:djJFf54THACdy3IvcIJ9@bstjvcygkdoufwwvzdbt-mysql.services.clever-cloud.com:3306/bstjvcygkdoufwwvzdbt"
-MYSQL_ADDON_USER="uxgcaxzysyalal21"
-MYSQL_ADDON_VERSION="8.0"
+MYSQL_ADDON_HOST=bblrnxppl1dhetuwlnl1-mysql.services.clever-cloud.com
+MYSQL_ADDON_DB=bblrnxppl1dhetuwlnl1
+MYSQL_ADDON_USER=ue6zpkcrp2374vyb
+MYSQL_ADDON_PORT=3306
+MYSQL_ADDON_PASSWORD=e8ZjMkATDFfZt04jW66c 
+MYSQL_ADDON_URI=mysql://ue6zpkcrp2374vyb:e8ZjMkATDFfZt04jW66c@bblrnxppl1dhetuwlnl1-mysql.services.clever-cloud.com:3306/bblrnxppl1dhetuwlnl1
 
