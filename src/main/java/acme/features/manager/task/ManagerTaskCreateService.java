@@ -13,6 +13,7 @@
 package acme.features.manager.task;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -90,6 +91,28 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 
 		return result;
 	}
+	 
+	 public Boolean validarFecha(final Date date) {
+	        if(date==null) {
+	        	return false;
+	        }
+	        Boolean res= true;
+	        final Calendar calendar = Calendar.getInstance();
+	        calendar.setTime(date);
+	        final int[] diasMes= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	        if(Calendar.YEAR <0 || Calendar.MONTH<1 || Calendar.MONTH>12 || Calendar.DAY_OF_MONTH<1 || Calendar.DAY_OF_MONTH>31) {
+	            res=false;
+	            return res;
+	        }else if(Calendar.MONTH ==2 || Calendar.YEAR%4 ==0) {
+	            res = Calendar.DAY_OF_MONTH>=1 && Calendar.DAY_OF_MONTH<=29;
+	            return res;
+	        }else if(!(Calendar.DAY_OF_MONTH<= diasMes[Calendar.MONTH-1])) {
+	            res = false;
+	            return res;
+	        }
+	        return res;
+
+	    }
 
 	@Override
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
@@ -106,6 +129,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, !lsp.get(i).isSpam(entity.getTitle()), "title", "manager.message.form.error.spam");
 			errors.state(request, !lsp.get(i).isSpam(entity.getDescription()), "description", "manager.message.form.error.spam");
 		}
+		
 
 		if (entity.getPeriodFinal() != null && entity.getPeriodInitial() != null && entity.getPeriodInitial().after(entity.getPeriodFinal())) {
 			errors.state(request, false, "periodInitial", "manager.message.form.error.date");
@@ -136,10 +160,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			final int tamaño = parteDecimalCompleta.length();
 			
 			if(tamaño>2) {
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload4");
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
 			} else if(parteDecimal<0 || parteDecimal>=60) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			} else if (entity.getPeriodInitial() == null && entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
+			} else if (entity.getPeriodInitial() == null || entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
 			}
 		}

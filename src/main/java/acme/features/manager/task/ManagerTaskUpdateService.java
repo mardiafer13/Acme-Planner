@@ -88,6 +88,14 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, !lsp.get(i).isSpam(entity.getTitle()), "title", "manager.message.form.error.spam");
 			errors.state(request, !lsp.get(i).isSpam(entity.getDescription()), "description", "manager.message.form.error.spam");
 		}
+		
+		if(entity.getPeriodInitial()==null) {
+			errors.state(request, false, "periodInitial", "manager.message.form.error.date4");
+		}
+		
+		if(entity.getPeriodFinal()==null) {
+			errors.state(request, false, "periodFinal", "manager.message.form.error.date4");
+		}
 
 		if (entity.getPeriodFinal() != null && entity.getPeriodInitial() != null && entity.getPeriodInitial().after(entity.getPeriodFinal())) {
 			errors.state(request, false, "periodInitial", "manager.message.form.error.date");
@@ -97,7 +105,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, false, "periodFinal", "manager.message.form.error.date2");
 		}
 		
-		if (entity.getWorkloadInHours() != null) {
+		if (entity.getPeriodFinal()!=null && entity.getPeriodInitial()!=null && entity.getWorkloadInHours() != null) {
 			final double number = entity.getWorkloadInHours();
 			final String str = String.format("%.2f", number);
 			final String fullNumber = String.valueOf(number);
@@ -108,10 +116,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			final int tamaño = parteDecimalCompleta.length();
 			
 			if(tamaño>2) {
-				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload4");
+				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
 			} else if(parteDecimal<0 || parteDecimal>=60) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload2");
-			} else if (entity.getPeriodInitial() == null && entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
+			} else if (entity.getPeriodInitial() == null || entity.getPeriodFinal() == null || workloadInMinutes > (entity.durationPeriodInMinutes())) {
 				errors.state(request, false, "workloadInHours", "manager.message.form.error.workload");
 			}
 		}

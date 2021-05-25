@@ -24,6 +24,7 @@ manager.message.form.error.spam = One of the fields contains a spam word
 manager.message.form.error.date = Initial date cannot be after end date
 manager.message.form.error.date2 = Final date cannot be before initial date
 manager.message.form.error.date3 = Date cannot be before today
+manager.message.form.error.date4 = Invalid date
 manager.message.form.error.workload = Workload cannot be higher than dates difference
 manager.message.form.error.workload2 = Workload minutes must be between 0 and 59
  
