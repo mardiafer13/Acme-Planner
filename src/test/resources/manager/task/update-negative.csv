@@ -1,0 +1,7 @@
+recordIndex,title,description,periodInitial,periodFinal,workloadInHours,link,isPublic
+0,,,,,,,false
+1,,Tengo q ir a la escuela,2020/08/17 12:24,2021/08/17 13:25,0.60,https://sample5.com,true
+2,Dp editado 5,,2021/08/17 12:25,2020/08/17 12:24,0.01,sample.com,false
+3,Tarea 3 edit,Tengo q ir a lavar la ropa,2021/08/17 12:25,,-18,https://sample4.com,true
+4,Tarea 17,Lavar los platos,2021/08/17 12:25,2021/08/17 12:27,0.03,https://sample3.com,true
+5,Tarea 28 sexo,Hacer DP,2021/08/17 12:25,2030/08/17 12:27,1000.08,https://sample2.com,false

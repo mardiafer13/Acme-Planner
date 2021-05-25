@@ -1,0 +1,8 @@
+recordIndex,title,description,begin,end,workload,Link,isPublic
+0,,,,,,,false
+1,Nigeria,descripcion bien,2021/06/30 17:50,2021/10/31 18:55,999.10,http://www.sample-app.com/,true
+2,Titulo correcto,sex,2021/06/30 17:50,2021/08/31 18:55,1.00,,false
+3,Tarea 6,hacer la comida,2021/03/31 17:50,2021/08/31 18:55,10.23,http://www.sample-app.com/,false
+3,Tarea 7,Descripcion,2021/07/31 17:50,2021/05/31 18:55,20.99,http://www.sample-app.com/,true
+4,Titulo,ir al gym,2021/09/30 17:50,2021/10/31 18:55,-3.00,,false
+5,Tarea 9,Recoger colada,2021/06/30 17:50,2021/07/30 18:56,725.00,sample-app.com,false

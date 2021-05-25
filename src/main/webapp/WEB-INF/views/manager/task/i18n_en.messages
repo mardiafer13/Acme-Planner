@@ -25,7 +25,7 @@ manager.message.form.error.date = Initial date cannot be after end date
 manager.message.form.error.date2 = Final date cannot be before initial date
 manager.message.form.error.date3 = Date cannot be before today
 manager.message.form.error.workload = Workload cannot be higher than dates difference
-manager.message.form.error.workload2 = Workload minutes must be between 0 and 60
+manager.message.form.error.workload2 = Workload minutes must be between 0 and 59
 manager.message.form.error.workload3 = Workload must be higher than 0
  
 

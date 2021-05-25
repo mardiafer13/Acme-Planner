@@ -79,10 +79,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		moment = new Date(System.currentTimeMillis() - 1);
 
 		result = new Shout();
-		result.setAuthor("John Doe");
-		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
-		result.setInfo("http://example.org");
 
 		return result;
 	}
@@ -92,7 +89,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
         assert request != null;
         assert entity != null;
         assert errors != null;
-        final String[] trozos = entity.getText().split(" ");
 
         final List<Configuration> sp = this.repository.findManySpamWord();
         final List<Configuration> lsp = new ArrayList<>();
