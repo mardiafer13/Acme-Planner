@@ -37,12 +37,12 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 		assert request != null;
 		final Task tarea = this.findOne(request);
 		final Integer id = tarea.getManager().getId();
-		if(request.getPrincipal().getAccountId() != id) {
+		if(request.getPrincipal().getActiveRoleId() != id) {
 			return false;
 		}else {
 			return true;
 		}
-
+	//	return true;
 		
 	}
 

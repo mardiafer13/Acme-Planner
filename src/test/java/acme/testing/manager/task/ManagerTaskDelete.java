@@ -53,7 +53,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 	public void deleteTasksNegativeAnonymous(final int recordIndex, final String title, final String description, final String periodInitial, final String periodFinal, final String workloadInHours, final String link, final Boolean isPublic) {
 
 		// Clica en el menú para acceder a las tareas del manager
-		this.driver.get("localhost:8080/Acme-Planner/manager/task/show?id=20");
+		this.driver.get("localhost:8080/Acme-Planner/manager/task/delete?id=20");
 		
 		super.checkPanicExists();
 
@@ -69,7 +69,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 
 		// Clica en el menú para acceder a las tareas del manager
-		this.driver.get("localhost:8080/Acme-Planner/manager/task/show?id=20");
+		this.driver.get("localhost:8080/Acme-Planner/manager/task/delete?id=20");
 		
 		super.checkPanicExists();
 		
@@ -87,7 +87,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 		super.signIn("employer1", "employer1");
 
 		// Clica en el menú para acceder a las tareas del manager
-		this.driver.get("localhost:8080/Acme-Planner/manager/task/show?id=20");
+		this.driver.get("localhost:8080/Acme-Planner/manager/task/delete?id=20");
 		
 		super.checkPanicExists();
 
@@ -105,7 +105,7 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 		super.signIn("worker1", "worker1");
 
 		// Clica en el menú para acceder a las tareas del manager
-		this.driver.get("localhost:8080/Acme-Planner/manager/task/show?id=20");
+		this.driver.get("localhost:8080/Acme-Planner/manager/task/delete?id=20");
 		
 		super.checkPanicExists();
 		
@@ -122,12 +122,11 @@ public class ManagerTaskDelete extends AcmePlannerTest {
 		super.signIn("manager2", "manager2");
 
 		// Clica en el menú para acceder a las tareas del manager
-		this.driver.get("localhost:8080/Acme-Planner/manager/task/show?id=20");
+		this.driver.get("localhost:8080/Acme-Planner/manager/task/delete?id=20");
 		
 		super.checkPanicExists();
 		
 		super.signOut();
 	}
-	
 	
 }
