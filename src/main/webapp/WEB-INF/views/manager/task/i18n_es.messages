@@ -24,9 +24,9 @@ manager.message.form.error.spam = Uno de los campos contiene una palabra spam
 manager.message.form.error.date = La fecha inicial no puede ser posterior a la final
 manager.message.form.error.date2 = La fecha final no puede ser anterior a la inicial
 manager.message.form.error.date3 = La fecha no puede ser anterior a hoy
+manager.message.form.error.date4 = La fecha introducida es invalida
 manager.message.form.error.workload = La carga de trabajo no puede ser superior a la diferencia entre fechas
 manager.message.form.error.workload2 = Los minutos de la carga de trabajo deben estar entre 0 y 59
-manager.message.form.error.workload3 = La carga de trabajo debe ser superior a 0
 
 manager.task.list.label.initial = Inicio
 manager.task.list.label.end = Fin
