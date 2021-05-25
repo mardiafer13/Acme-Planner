@@ -35,8 +35,15 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		final Task tarea = this.findOne(request);
+		final Integer id = tarea.getManager().getId();
+		if(request.getPrincipal().getAccountId() != id) {
+			return false;
+		}else {
+			return true;
+		}
 
-		return true;
+		
 	}
 
 	@Override
